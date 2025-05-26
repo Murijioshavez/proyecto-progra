@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
-<body class="bg-gray-100">
-    <nav class="bg-black">
+
+<body class="'bg bg-gray-100">
+        <nav class="bg-black">
   <div class="max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -40,9 +42,9 @@
         <div class="hidden sm:ml-6 sm:block mt-2">
           <div class="flex items-center space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
-            <a href="/nueva" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nueva</a>
-            <a href="/actividades" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades hechas hasta la fecha</a>
+            <a href="/" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Dashboard</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nueva</a>
+            <a href="/actividades" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Actividades hechas hasta la fecha</a>
           </div>
         </div>
       </div>
@@ -76,13 +78,52 @@
   <div class="sm:hidden" id="mobile-menu">
     <div class="space-y-1 px-2 pt-2 pb-3">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
-            <a href="/nueva" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nueva</a>
+            <a href="/" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nueva</a>
             <a href="/actividades" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades hechas hasta la fecha</a>
     </div>
   </div>
 </nav>
 
-    <p class="text-center mt-6 text-3xl font-bold"> Bienvenido a A.R.A.E </p>
+    <div class="h-screen flex items-center justify-center">
+        <div class="max-w-xs w-full">
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <h1 class="text-lg text-gray-800 text-center">
+                    Nueva actividad
+                </h1>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                        Username
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="username" type="text" placeholder="Username">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        Password
+                    </label>
+                    <input
+                        class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                        id="password" type="password" placeholder="******************">
+                    <p class="text-red-500 text-xs italic">Please choose a password.</p>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button">
+                        Sign In
+                    </button>
+                    <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+                        Forgot Password?
+                    </a>
+                </div>
+            </form>
+            <p class="text-center text-gray-500 text-xs">
+                &copy;2025 Key institute. All rights reserved.
+            </p>
+        </div>
+    </div>
 </body>
+
 </html>

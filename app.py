@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect
 from registro_csv import leer_csv, guardar_en_csv
-
+from datetime import datetime
+now = datetime.now()
+formatted_date = now.strftime("%Y-%m-%d ")
 app = Flask(__name__)
 
 @app.route("/")
@@ -8,7 +10,7 @@ def home():
     return render_template("index.html")
 @app.route('/nueva')
 def nueva():
-    return render_template("nueva.html")
+    return render_template("nueva.html", today= formatted_date)
 
 @app.route('/actividades')
 def actividades():
@@ -22,8 +24,10 @@ def publicar():
         descripcion = request.form["descripcion"]
         duracion = request.form["duracion"]
         comentario = request.form["comentario"]
+        fecha = request.form["fecha"]
+        
 
-        guardar_en_csv('actividades.csv',{'categoria': categoria,'descripcion': descripcion,'duracion': duracion,'comentario': comentario}, ['categoria','descripcion','duracion','comentario'] )
+        guardar_en_csv('actividades.csv',{'categoria': categoria,'descripcion': descripcion,'duracion': duracion,'comentario': comentario, 'fecha': fecha}, ['categoria','descripcion','duracion','comentario', 'fecha'] )
 
         return redirect("/actividades")  
 

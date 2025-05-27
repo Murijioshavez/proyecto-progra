@@ -2,64 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Document</title>
 </head>
 
 <body class="'bg bg-gray-100">
-        <nav class="bg-black">
-  <div class="max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="absolute -inset-0.5"></span>
-          <span class="sr-only">Open main menu</span>
-          <!--
+  <nav class="bg-black">
+    <div class="max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!--
             Icon when menu is closed.
 
             Menu open: "hidden", Menu closed: "block"
           -->
-          <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-          <!--
+            <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
             Icon when menu is open.
 
             Menu open: "block", Menu closed: "hidden"
           -->
-          <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-        <div class="flex shrink-0 items-center">
-          <img class="h-12 w-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgM5MRPWd6ZZQhb6GzW0VQsgTHq0cK9XByfw&s" alt="Your Company">
+            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
-        <div class="hidden sm:ml-6 sm:block mt-2">
-          <div class="flex items-center space-x-4">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Dashboard</a>
-            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Nueva</a>
-            <a href="/actividades" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades hechas hasta la fecha</a>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex shrink-0 items-center">
+            <img class="h-12 w-auto"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgM5MRPWd6ZZQhb6GzW0VQsgTHq0cK9XByfw&s"
+              alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block mt-2">
+            <div class="flex items-center space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="/"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Dashboard</a>
+              <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                aria-current="page">Nueva</a>
+              <a href="/actividades"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades
+                hechas hasta la fecha</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
-        <!-- Profile dropdown -->
-        <div class="flex justify-end">
-          <div>
-            <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-              <span class="absolute -inset-1.5"></span>
-              <span class="sr-only">Open user menu</span>
-            </button>
-          </div>
+          <!-- Profile dropdown -->
+          <div class="flex justify-end">
+            <div>
+              <button type="button"
+                class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">Open user menu</span>
+              </button>
+            </div>
 
-          <!--
+            <!--
             Dropdown menu, show/hide based on menu state.
 
             Entering: "transition ease-out duration-100"
@@ -69,63 +81,84 @@
               From: "transform opacity-100 scale-100"
               To: "transform opacity-0 scale-95"
           -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
-    <div class="space-y-1 px-2 pt-2 pb-3">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Dashboard</a>
-            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Nueva</a>
-            <a href="/actividades" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades hechas hasta la fecha</a>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="/"
+          class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Dashboard</a>
+        <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+          aria-current="page">Nueva</a>
+        <a href="/actividades"
+          class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades
+          hechas hasta la fecha</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-    <div class="h-screen flex items-center justify-center">
-        <div class="max-w-xs w-full">
-            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post">
-                <h1 class="text-lg text-gray-800 text-center">
-                    Digite la categoría
-                </h1>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-                        Username
-                    </label>
-                    <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="username" type="text" placeholder="Categoría">
-                        <p class="text-red-500 text-xs italic">Campo requerido.</p>
+  <div class="mt-16 flex items-center justify-center">
+    <div class="max-w-xs w-full">
+      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST" action="/publicar">
+        <h1 class="text-lg text-gray-800 text-center font-bold mb-2">
+          Publicar nueva actividad
+        </h1>
+        <div class="mb-4">
+          <label for="categoria" class="block mb-2 text-sm font-medium text-gray-700">Selecciona una categoría</label>
+          <select name="categoria" id="categoria"
+            class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+            <option value="Deporte y cultura">Deporte y cultura</option>
+            <option value="Torneos internos">Torneos internos</option>
+            <option value="Capitulos estudiantiles">Capítulos estudiantiles</option>
+            <option value="Grupos estudiantiles">Grupos estudiantiles</option>
+            <option value="Bienestar">Bienestar</option>
+            <option value="Clubs estudiantiles">Clubs estudiantiles</option>
+            <option value="Actividades recreativas">Actividades recreativas</option>
+          </select>
 
-                </div>
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                        Titulo de la actividad
-                    </label>
-                    <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="username" type="text" placeholder="Titulo">
-                    <p class="text-red-500 text-xs italic">Campo requerido.</p>
-                </div>
-                <div class="flex items-center justify-between">
-                    <button
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        type="button">
-                        Sign In
-                    </button>
-                    <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-                        Forgot Password?
-                    </a>
-                </div>
-            </form>
-            <p class="text-center text-gray-500 text-xs">
-                &copy;2025 Key institute. All rights reserved.
-            </p>
         </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Titulo de la actividad
+          </label>
+          <input required name="descripcion"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="titulo" type="text" placeholder="Titulo">
+        </div>
+         <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Duración de la actividad
+          </label>
+          <input required name="duracion"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="duracion" type="text" placeholder="Duración">
+        </div>
+         <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Descripción
+          </label>
+          <input required name="comentario"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="desc" type="text" placeholder="Describa brevemente la actividad">
+        </div>
+        <div class="flex items-center justify-center">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit">
+            Publicar
+          </button>
+
+        </div>
+      </form>
+      <p class="text-center text-gray-500 text-xs">
+        &copy;2025 Key institute. All rights reserved.
+      </p>
     </div>
+  </div>
 </body>
 
 </html>

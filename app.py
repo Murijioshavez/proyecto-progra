@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from registro_csv import leer_csv, guardar_en_csv
 
 app = Flask(__name__)

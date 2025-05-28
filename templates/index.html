@@ -11,74 +11,55 @@
 
 <body class="bg-gray-100">
   <nav class="bg-black">
-    <div class="max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        </div>
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden"></div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex shrink-0 items-center">
-            <img class="h-8 w-auto"
-              src="/static/favicon.png"
-              alt="Your Company">
+            <img class="h-8 w-auto" src="/static/favicon.png" alt="Your Company">
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex items-center space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                aria-current="page">Dashboard</a>
-              <a href="/nueva"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nueva</a>
-              <a href="/actividades"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades
-                hechas hasta la fecha</a>
+              <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
+              <a href="/nueva" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nueva</a>
+              <a href="/actividades" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades hechas hasta la fecha</a>
             </div>
           </div>
         </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
-
-
-        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"></div>
       </div>
     </div>
-    </div>
 
-    <!-- Mobile menu, show/hide xld on menu state. -->
+    <!-- Mobile menu -->
     <div class="sm:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-          aria-current="page">Dashboard</a>
-        <a href="/nueva"
-          class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nueva</a>
-        <a href="/actividades"
-          class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades
-          hechas hasta la fecha</a>
+        <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
+        <a href="/nueva" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nueva</a>
+        <a href="/actividades" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades hechas hasta la fecha</a>
       </div>
     </div>
   </nav>
-  <div class=" flex grid grid-cols-3 h-50">
 
-    <p class="text-center mt-10 text-3xl mb-6 col-start-2 items-center font-bold"> Mira y registra todas las actividades extracurriculares
-      de Key Institute </p>
+  <!-- Título -->
+  <div class="flex flex-col items-center justify-center px-4 mt-10 mb-6 text-center">
+    <p class="text-2xl sm:text-3xl font-bold">
+      Mira y registra todas las actividades extracurriculares de Key Institute
+    </p>
   </div>
 
-  <div class="ml-6 mr-6">
+  <!-- Card explicativa -->
+  <div class="px-4">
     <div class="bg-white shadow-md rounded-lg p-6 mb-4">
-      <p class="text-xl font-medium mb-1">El Asistente de Registro Para Actividades es una herramienta hecha
-        para llevar un historial de las actividades extracurriculares hechas hasta la fecha.</p>
-      <p class="text-xl font-semibold text-gray-800">Algunas de estas actividades son:</p>
-      <div>
-        <ul class="list-disc ml-12">
-          <li class="font-bold text-base">Deportes</li>
-        </ul>
-      </div>
-      
+      <p class="text-lg sm:text-xl font-medium mb-2">
+        El Asistente de Registro Para Actividades es una herramienta hecha para llevar un historial de las actividades extracurriculares hechas hasta la fecha.
+      </p>
+      <p class="text-lg sm:text-xl font-semibold text-gray-800 mb-2">Algunas de estas actividades son:</p>
+      <ul class="list-disc ml-6 sm:ml-12">
+        <li class="font-bold text-base">Deportes</li>
+        <!-- Podés seguir agregando más actividades aquí -->
+      </ul>
     </div>
   </div>
-
-
-
 </body>
 
 </html>

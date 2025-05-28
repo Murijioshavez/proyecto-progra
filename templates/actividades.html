@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>Document</title>
+  <title>Actividades</title>
+  <link rel="icon" href="/static/favicon.png" type="image/png">
+
 </head>
 
 <body class="bg-gray-100">
@@ -16,8 +18,8 @@
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex shrink-0 items-center">
-            <img class="h-12 w-auto"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgM5MRPWd6ZZQhb6GzW0VQsgTHq0cK9XByfw&s"
+            <img class="h-8 w-auto"
+              src="/static/favicon.png"
               alt="Your Company">
           </div>
           <div class="hidden sm:ml-6 sm:block mt-2">
@@ -54,8 +56,8 @@
   </nav>
 
   <p class="text-center mt-6 text-3xl mb-3 font-bold"> Aquí encontrarás las actividades hechas hasta la fecha </p>
+  <div class="ml-2 mr-2 grid grid-cols-3 gap-4 mt-4">
   {% for actividad in actividades %}
-  <div class="ml-2 mr-2">
     <div class="bg-white shadow-md rounded-lg p-6 mb-4">
       <h2 class="text-xl font-semibold text-gray-800">{{ actividad['descripcion'] }}</h2>
       <p class="text-sm text-gray-500 mb-1">Categoría: {{ actividad['categoria'] }}</p>
@@ -63,8 +65,8 @@
       <p class="text-sm text-gray-500 mb-1">Duración: {{ actividad['duracion'] }}</p>
       <p class="text-gray-700 mt-2">{{ actividad['comentario'] }}</p>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </body>
 
 </html>

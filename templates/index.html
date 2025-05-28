@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>Document</title>
+  <title>Dashboard</title>
+  <link rel="icon" href="/static/favicon.png" type="image/png">
 </head>
 
 <body class="bg-gray-100">
@@ -16,11 +17,11 @@
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex shrink-0 items-center">
-            <img class="h-12 w-auto"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgM5MRPWd6ZZQhb6GzW0VQsgTHq0cK9XByfw&s"
+            <img class="h-8 w-auto"
+              src="/static/favicon.png"
               alt="Your Company">
           </div>
-          <div class="hidden sm:ml-6 sm:block mt-2">
+          <div class="hidden sm:ml-6 sm:block">
             <div class="flex items-center space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
@@ -42,7 +43,7 @@
     </div>
     </div>
 
-    <!-- Mobile menu, show/hide based on menu state. -->
+    <!-- Mobile menu, show/hide xld on menu state. -->
     <div class="sm:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -56,8 +57,28 @@
       </div>
     </div>
   </nav>
+  <div class=" flex grid grid-cols-3 h-50">
 
-  <p class="text-center mt-6 text-3xl font-bold"> Bienvenido a A.R.A.E </p>
+    <p class="text-center mt-10 text-3xl mb-6 col-start-2 items-center font-bold"> Mira y registra todas las actividades extracurriculares
+      de Key Institute </p>
+  </div>
+
+  <div class="ml-6 mr-6">
+    <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+      <p class="text-xl font-medium mb-1">El Asistente de Registro Para Actividades es una herramienta hecha
+        para llevar un historial de las actividades extracurriculares hechas hasta la fecha.</p>
+      <p class="text-xl font-semibold text-gray-800">Algunas de estas actividades son:</p>
+      <div>
+        <ul class="list-disc ml-12">
+          <li class="font-bold text-base">Deportes</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+
 </body>
 
 </html>

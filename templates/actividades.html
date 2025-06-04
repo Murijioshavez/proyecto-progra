@@ -8,9 +8,57 @@
   <title>Actividades</title>
   <link rel="icon" href="/static/favicon.png" type="image/png">
 
-</head>
+  <!-- Evo-calendar base style -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css" />
 
-<body class="bg-gray-100">
+  <!-- 👇 Aquí el tema específico "Royal Navy" -->
+  <link rel="stylesheet" type="text/css"
+    href="/static/evo-calendar/evo-calendar/css/evo-calendar.royal-navy.min.css" />
+    <style>
+  /* Calendario completo */
+
+      body{
+        background-color: rgb(229,229,232);
+      }
+  /* Fondo principal */
+  .evo-calendar .calendar-inner {
+    background-color: rgb(229,229,232); /* Negro */
+    color: rgb(229,229,232);   /* Gris claro */
+  }
+
+</style>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+  <!-- Evo-calendar funcionalidad -->
+  <script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
+</head>
+  <script>
+    let actividades = {{actividades|tojson}};
+    console.log(actividades);
+    $(document).ready(function () {
+      events = actividades.map((event, index)=> (
+        {
+          id: `${index}`,
+          name: `${event.descripcion}`,
+          date: [`${event.fecha}`, `${event.fecha}`], // Date range
+          description: `${event.comentario}`, // Event description (optional)
+          type: "event",
+          color: `${event.color}` // Event custom color (optional)
+         }
+       ))
+            $('#calendar').evoCalendar({
+                theme: 'Royal Navy',
+
+                calendarEvents: events
+            })
+        })
+  </script>
+
+<body>
   <nav class="bg-black">
     <div class="max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
@@ -18,9 +66,7 @@
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex shrink-0 items-center">
-            <img class="h-8 w-auto"
-              src="/static/favicon.png"
-              alt="Your Company">
+            <img class="h-8 w-auto" src="/static/favicon.png" alt="Your Company">
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex items-center space-x-4">
@@ -56,16 +102,9 @@
   </nav>
 
   <p class="text-center mt-6 text-3xl mb-3 font-bold"> Aquí encontrarás las actividades hechas hasta la fecha </p>
+
+  <div id="calendar"></div>
   <div class="ml-2 mr-2 grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
-  {% for actividad in actividades %}
-    <div class="bg-white shadow-md rounded-lg p-6 mb-4">
-      <h2 class="text-xl font-semibold text-gray-800">{{ actividad['descripcion'] }}</h2>
-      <p class="text-sm text-gray-500 mb-1">Categoría: {{ actividad['categoria'] }}</p>
-      <p class="text-sm text-gray-500 mb-1">Fecha: {{ actividad['fecha'] }}</p>
-      <p class="text-sm text-gray-500 mb-1">Duración: {{ actividad['duracion'] }}</p>
-      <p class="text-gray-700 mt-2">{{ actividad['comentario'] }}</p>
-    </div>
-    {% endfor %}
   </div>
 </body>
 

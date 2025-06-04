@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from registro_csv import leer_csv, guardar_en_csv
+from registro import leer_json, guardar_en_json, colores
 from datetime import datetime
 now = datetime.now()
 formatted_date = now.strftime("%Y-%m-%d ")
@@ -14,8 +14,8 @@ def nueva():
 
 @app.route('/actividades')
 def actividades():
-    actividades = leer_csv('/actividades.csv')
-    return render_template("actividades.html", actividades=actividades[::-1])
+     actividades = leer_json('/actividades.json')
+     return render_template("actividades.html", actividades=actividades)
 
 @app.route("/publicar", methods=["GET", "POST"])
 def publicar():
@@ -25,9 +25,10 @@ def publicar():
         duracion = request.form["duracion"]
         comentario = request.form["comentario"]
         fecha = request.form["fecha"]
+        color = colores[categoria]
         
 
-        guardar_en_csv('actividades.csv',{'categoria': categoria,'descripcion': descripcion,'duracion': duracion,'comentario': comentario, 'fecha': fecha}, ['categoria','descripcion','duracion','comentario', 'fecha'] )
+        guardar_en_json('actividades.json',{'categoria': categoria,'descripcion': descripcion,'duracion': duracion,'comentario': comentario, 'fecha': fecha.replace('-', '/'), 'color': color} )
 
         return redirect("/actividades")  
 

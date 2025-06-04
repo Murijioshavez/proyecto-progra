@@ -1,0 +1,50 @@
+[
+    {
+        "categoria": "deporte",
+        "descripcion": "Torneo de tenis de mesa",
+        "duracion": "3 semanas",
+        "comentario": "un torneo por llaves que incentiva a los estudiantes a competir de manera sana",
+        "fecha": "2025/05/29",
+        "color": "#7BBDFF"
+    },
+    {
+        "categoria": "deporte",
+        "descripcion": "Torneo de ajedrez",
+        "duracion": "3 horas",
+        "comentario": "Torneo de ajedrez por niveles de conocimiento en el deporte",
+        "fecha": "2025/05/29",
+        "color": "#F7FFA4"
+    },
+    {
+        "categoria": "recreativo",
+        "descripcion": "Caminata",
+        "duracion": "5 horas",
+        "comentario": "Caminata por la naturaleza para relajarse y disfrutar de la naturalezaDeporte y cultura",
+        "fecha": "2025/05/29",
+        "color": "#7BBDFF"
+    },
+    {
+        "categoria": "Deporte y cultura",
+        "descripcion": "Torneo Mario Kart",
+        "duracion": "2 horas",
+        "comentario": "Torneo de Mario Kart 8 para todo aquel que quiera participar",
+        "fecha": "2025/05/29",
+        "color": "#F7FFA4"
+    },
+    {
+        "categoria": "Bienestar",
+        "descripcion": "dp",
+        "duracion": "5 horas",
+        "comentario": "relajarse",
+        "fecha": "2025/05/29",
+        "color": "#7BBDFF"
+    },
+    {
+        "categoria": "Mentor\u00eda",
+        "descripcion": "Consejer\u00eda estudiantil",
+        "duracion": "2 horas",
+        "comentario": "Consejer\u00eda Estudiantil con Valeria Moncada",
+        "fecha": "2025/06/04",
+        "color": "#8EFFA2"
+    }
+]

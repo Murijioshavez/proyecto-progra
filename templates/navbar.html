@@ -1,0 +1,32 @@
+<nav class="bg-[#003366] shadow-md font-sans">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="/static/logo_blanco.png" alt="Key Institute" class="h-8 w-auto" />
+    </div>
+
+    <!-- Desktop menu -->
+    <div class="hidden sm:flex space-x-4">
+      <a href="/" class="text-white font-medium px-3 py-2 rounded hover:bg-[#002244]">Dashboard</a>
+      <a href="/nueva" class="text-white font-medium px-3 py-2 rounded hover:bg-[#002244]">Nueva</a>
+      <a href="/actividades" class="text-white font-medium px-3 py-2 rounded hover:bg-[#002244]">Lista de actividades</a>
+    </div>
+
+    <!-- Mobile menu icon (solo decorativa, sin JS) -->
+    <div class="sm:hidden">
+      <!-- Si decides implementar comportamiento después, podés añadirlo -->
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Mobile menu visible solo en pantallas pequeñas -->
+  <div class="sm:hidden px-4 pb-4 space-y-1">
+    <a href="/" class="block text-white px-3 py-2 rounded hover:bg-[#002244]">Dashboard</a>
+    <a href="/nueva" class="block bg-white text-[#003366] font-semibold px-3 py-2 rounded hover:bg-gray-100">Nueva</a>
+    <a href="/actividades" class="block text-white px-3 py-2 rounded hover:bg-[#002244]">Lista de actividades</a>
+  </div>
+</nav>

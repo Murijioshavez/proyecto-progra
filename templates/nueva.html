@@ -9,63 +9,8 @@
   <link rel="icon" href="/static/favicon.png" type="image/png">
 </head>
 
-<body class="'bg bg-gray-100">
-  <nav class="bg-black">
-    <div class="max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex shrink-0 items-center">
-            <img class="h-8 w-auto"
-              src="/static/favicon.png"
-              alt="Your Company">
-          </div>
-          <div class="hidden sm:ml-6 sm:block">
-            <div class="flex items-center space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="/"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Dashboard</a>
-              <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                aria-current="page">Nueva</a>
-              <a href="/actividades"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades
-                hechas hasta la fecha</a>
-            </div>
-          </div>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
-          <!-- Profile dropdown -->
-          <div class="flex justify-end">
-            <div>
-              <button type="button"
-                class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
-                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                <span class="absolute -inset-1.5"></span>
-                <span class="sr-only">Open user menu</span>
-              </button>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pt-2 pb-3">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="/"
-          class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Dashboard</a>
-        <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-          aria-current="page">Nueva</a>
-        <a href="/actividades"
-          class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Actividades
-          hechas hasta la fecha</a>
-      </div>
-    </div>
-  </nav>
+<body class="bg bg-gray-100">
+  {% include 'navbar.html' %}
 
   <div class="mt-12 flex items-center justify-center">
     <div class="max-w-xs w-full">
@@ -90,7 +35,7 @@
 
         </div>
         <div class="mb-6">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="">
             Titulo de la actividad
           </label>
           <input required name="descripcion"
@@ -98,7 +43,7 @@
             id="titulo" type="text" placeholder="Titulo">
         </div>
         <div class="mb-6">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="">
             Duración de la actividad
           </label>
           <input required name="duracion"
@@ -106,23 +51,22 @@
             id="duracion" type="text" placeholder="Duración">
         </div>
         <div class="mb-6">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="">
             Fecha
           </label>
           <input required name="fecha"
           placeholder="pi" type="date" class="border rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" min={{ today }}>
         </div>
         <div class="mb-6">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="">
             Descripción
           </label>
-          <input required name="comentario"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="desc" type="text" placeholder="Describa brevemente la actividad">
+          <textarea name="comentario" id="desc" rows="4" placeholder="Describa brevemente la actividad" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+
         </div>
         <div class="flex items-center justify-center">
           <button
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            class="bg-[#003366] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit">
             Publicar
           </button>

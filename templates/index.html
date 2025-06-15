@@ -12,22 +12,27 @@
 <body class="bg-gray-100">
   {% include 'navbar.html' %}
 
- <div class="flex flex-col items-center justify-center px-4 mt-10 mb-6 text-center">
-    <p class="text-3xl font-bold text-[#003366]">Mira y registra todas las actividades extracurriculares de Key Institute</p>
+  <div class="flex flex-col items-center justify-center px-4 mt-10 mb-6 text-center">
+    <p class="text-3xl font-bold text-[#003366]">
+      Mira y registra todas las actividades extracurriculares de Key Institute
+    </p>
   </div>
 
   <!-- Card -->
   <div class="px-4">
     <div class="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto">
       <p class="text-lg font-medium mb-2">
-        El Asistente de Registro Para Actividades es una herramienta hecha para llevar un historial de las actividades extracurriculares hechas hasta la fecha.
+        El Asistente de Registro Para Actividades es una herramienta hecha para llevar un historial de las actividades
+        extracurriculares hechas hasta la fecha.
       </p>
       <p class="text-lg font-semibold text-[#003366] mb-2">Algunas de estas actividades son:</p>
-      <ul class="list-disc ml-6">
-        <li class="font-bold">Deportes</li>
+      <ul class="list-disc ml-6 space-y-1 text-gray-800">
+        {%for actividad, color in colores.items() %}
+        <li class="font-bold" style="color: {{ color }};">{{ actividad }}</li>
+
+        {%endfor%}
+
       </ul>
-    </div>
-  </div>
     </div>
   </div>
 </body>

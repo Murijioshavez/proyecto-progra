@@ -23,14 +23,9 @@
           <select name="categoria" id="categoria"
             class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
             required>
-            <option value="Deporte y cultura">Deporte y cultura</option>
-            <option value="Torneos internos">Torneos internos</option>
-            <option value="Capitulos estudiantiles">Capítulos estudiantiles</option>
-            <option value="Grupos estudiantiles">Grupos estudiantiles</option>
-            <option value="Bienestar">Bienestar</option>
-            <option value="Mentoría">Mentoría</option>
-            <option value="Clubs estudiantiles">Clubs estudiantiles</option>
-            <option value="Actividades recreativas">Actividades recreativas</option>
+            {% for cocurricular in cocurriculares %}
+              <option value={{cocurricular}}>{{ cocurricular }}</option>
+            {% endfor %}
           </select>
 
         </div>
@@ -54,14 +49,15 @@
           <label class="block text-gray-700 text-sm font-bold mb-2" for="">
             Fecha
           </label>
-          <input required name="fecha"
-          placeholder="pi" type="date" class="border rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" min={{ today }}>
+          <input required name="fecha" placeholder="pi" type="date"
+            class="border rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" min={{ today }}>
         </div>
         <div class="mb-6">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="">
             Descripción
           </label>
-          <textarea name="comentario" id="desc" rows="4" placeholder="Describa brevemente la actividad" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+          <textarea name="comentario" id="desc" rows="4" placeholder="Describa brevemente la actividad" required
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
 
         </div>
         <div class="flex items-center justify-center">

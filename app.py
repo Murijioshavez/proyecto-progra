@@ -15,8 +15,12 @@ def nueva():
 
 @app.route('/actividades')
 def actividades():
-     actividades = leer_json('actividades.json')
-     return render_template("actividades.html", actividades=actividades)
+    try:
+        actividades = leer_json('actividades.json')
+        return render_template("actividades.html", actividades=actividades)
+    except Exception as e:
+        print(f"Error al cargar actividades: {e}")
+        return "Hubo un error cargando las actividades", 500
 
 @app.route("/publicar", methods=["GET", "POST"])
 def publicar():

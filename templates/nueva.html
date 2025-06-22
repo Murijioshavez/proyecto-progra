@@ -9,7 +9,7 @@
   <link rel="icon" href="/static/favicon.png" type="image/png">
 </head>
 
-<body class="bg bg-gray-100">
+<body class="bg bg-gray-100" style="background-image: url('/static/pattern (2).svg'); background-repeat: repeat; background-color: #f3f4f6;">
   {% include 'navbar.html' %}
 
   <div class="mt-12 flex items-center justify-center">
@@ -23,8 +23,8 @@
           <select name="categoria" id="categoria"
             class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
             required>
-            {% for cocurricular in cocurriculares %}
-              <option value={{cocurricular}}>{{ cocurricular }}</option>
+            {% for actividad, color in colores.items() %}
+              <option value='{{actividad}}'>{{ actividad }}</option>
             {% endfor %}
           </select>
 

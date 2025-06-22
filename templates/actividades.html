@@ -43,7 +43,7 @@
           id: `${index}`,
           name: `${event.descripcion}`,
           date: [`${event.fecha}`, `${event.fecha}`], // Date range
-          description: `${event.comentario}`, // Event description (optional)
+          description: `Duración: ${event.duracion}<br>${event.comentario}`, // Event description (optional)
           type: "event",
           color: `${event.color}` // Event custom color (optional)
          }
@@ -56,7 +56,7 @@
         })
   </script>
 
-<body class="font-sans">
+<body class="bg bg-gray-100 font-sans" style="background-image: url('/static/pattern (3).svg'); background-repeat: repeat; background-color: #f3f4f6;">
   {% include 'navbar.html' %}
 
   <p class="text-center mt-6 text-3xl mb-3 font-bold"> Aquí encontrarás las actividades hechas hasta la fecha </p>

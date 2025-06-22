@@ -9,7 +9,7 @@
   <link rel="icon" href="/static/favicon.png" type="image/png">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg bg-gray-100" style="background-image: url('/static/pattern (3).svg'); background-repeat: repeat; background-color: #f3f4f6;">
   {% include 'navbar.html' %}
 
   <div class="flex flex-col items-center justify-center px-4 mt-10 mb-6 text-center">
@@ -28,7 +28,7 @@
       <p class="text-lg font-semibold text-[#003366] mb-2">Algunas de estas actividades son:</p>
       <ul class="list-disc ml-6 space-y-1 text-gray-800">
         {%for actividad, color in colores.items() %}
-        <li class="font-bold" style="color: {{ color }};">{{ actividad }}</li>
+        <li class="font-bold text-[#003366]" >{{ actividad }}</li>
 
         {%endfor%}
 

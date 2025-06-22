@@ -46,5 +46,21 @@
         "comentario": "Consejer\u00eda Estudiantil con Valeria Moncada",
         "fecha": "2025/06/04",
         "color": "#8EFFA2"
+    },
+    {
+        "categoria": "Torneos Internos",
+        "descripcion": "Partido en BeSport",
+        "duracion": "2 horas",
+        "comentario": "a",
+        "fecha": "2025/06/20",
+        "color": "#7BBDFF"
+    },
+    {
+        "categoria": "Clubs estudiantiles",
+        "descripcion": "a",
+        "duracion": "2 horas",
+        "comentario": "aaaaaaaaaa",
+        "fecha": "2025/06/25",
+        "color": "#FEBAFF"
     }
 ]

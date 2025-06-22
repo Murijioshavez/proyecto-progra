@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from registro import leer_json, guardar_en_json, colores, cocurriculares
+from registro import leer_json, guardar_en_json, colores
 from datetime import datetime
 now = datetime.now()
 formatted_date = now.strftime("%Y-%m-%d ")
@@ -10,7 +10,7 @@ def home():
     return render_template("index.html", colores = colores)
 @app.route('/nueva')
 def nueva():
-    return render_template("nueva.html", today= formatted_date, cocurriculares = cocurriculares)
+    return render_template("nueva.html", today= formatted_date, colores = colores)
 
 @app.route('/actividades')
 def actividades():
@@ -21,6 +21,7 @@ def actividades():
 def publicar():
     if request.method == "POST":
         categoria = request.form["categoria"]
+        print(categoria)
         descripcion = request.form["descripcion"]
         duracion = request.form["duracion"]
         comentario = request.form["comentario"]

@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect
 from registro import leer_json, guardar_en_json, colores
 from datetime import datetime
@@ -35,4 +36,5 @@ def publicar():
 
     return render_template("actividades.html")  
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Usa 5000 si no se define otro puerto
+    app.run(host="0.0.0.0", port=port)

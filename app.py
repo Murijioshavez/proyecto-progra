@@ -40,5 +40,5 @@ def publicar():
 
     return render_template("actividades.html")  
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))  # Usa 5000 si no se define otro puerto
+    port = int(os.environ.get("PORT", 10000))  
     app.run(host="0.0.0.0", port=port)

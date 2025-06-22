@@ -5,7 +5,7 @@ colores = {'Torneos Internos':"#7BBDFF", 'Deporte y Cultura': "#11FF99",'Capítu
            "Actividades recreativas": "#E3A2FF"}
 
 def leer_json(archivo):
-    with open('actividades.JSON', encoding='utf-8') as archivo:
+    with open('actividades.json', encoding='utf-8') as archivo:
         data = json.load(archivo)
         return data
         

@@ -15,7 +15,7 @@ def nueva():
 
 @app.route('/actividades')
 def actividades():
-     actividades = leer_json('/actividades.json')
+     actividades = leer_json('actividades.json')
      return render_template("actividades.html", actividades=actividades)
 
 @app.route("/publicar", methods=["GET", "POST"])
